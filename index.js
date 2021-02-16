@@ -1,24 +1,7 @@
 require('dotenv').config();
+console.log(process.env);
 const axios = require('axios');
 const chalk = require('chalk');
-
-// const fbdefault = 'https://graph.facebook.com/v9.0'
-// const parametros = {
-//     message: "bomdia5aa",
-//     access_token: process.env.ACCESS_TOKEN
-// };
-
-// async function getKitty () {
-//     const kitty = await axios.get('https://api.thecatapi.com/v1/images/search');
-//     return kitty.data[0].url;
-// }
-
-// axios.post('https://graph.facebook.com/103703968333196/feed', parametros)
-//     .then((response) => {
-//         console.log(response)
-//     });
-
-// access_token = process.env.ACCESS_TOKEN;
 
 async function postarFoto () {
 
@@ -43,7 +26,3 @@ axios.post('https://graph.facebook.com/v9.0/103703968333196/photos', {
 }
 
 setInterval(postarFoto, 30000);
-
-// (async () => {
-//     console.log(await getKitty())
-// })();
